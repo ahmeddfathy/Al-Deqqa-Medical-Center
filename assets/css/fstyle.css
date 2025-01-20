@@ -1,0 +1,189 @@
+/* تصميم الموديل */
+.modal-content {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+}
+
+.modal-header {
+  background-color: #00e5ff; /* تغيير لون الهيدر للون الأزرق الفاتح */
+  border-radius: 15px 15px 0 0;
+  padding: 1rem 1.5rem;
+  border-bottom: none;
+}
+
+.modal-title {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.modal-header .btn-close {
+  color: #ffffff;
+  opacity: 1;
+  background-color: transparent;
+  padding: 1rem;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+/* تصميم القائمة داخل الموديل */
+.modal-body ul li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.modal-body .text-theme {
+  color: #00e5ff; /* تغيير لون الأيقونات */
+}
+
+/* تحسين مظهر الصورة */
+.modal-body img {
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+/* منع تداخل الموديل مع Hero section */
+.modal {
+  z-index: 9999;
+}
+
+.modal-backdrop {
+  z-index: 9998;
+}
+
+/* تحسين المظهر على الشاشات الصغيرة */
+@media (max-width: 576px) {
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .modal-body .row {
+    flex-direction: column;
+  }
+
+  .modal-body .col-md-6:first-child {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* تأثيرات حركية */
+.modal.fade .modal-dialog {
+  transform: scale(0.8);
+  transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-dialog {
+  transform: scale(1);
+}
+
+/* تصميم عنوان القوائم داخل الموديل */
+.modal-body h6 {
+  color: #00e5ff;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  position: relative;
+  padding-right: 15px;
+}
+
+.modal-body h6:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: #00e5ff;
+  border-radius: 2px;
+}
+
+/* إضافة تأثير hover على الأيقونات */
+.modal-body .fas.fa-check-circle {
+  color: #00e5ff;
+  transition: all 0.3s ease;
+}
+
+.modal-body li:hover .fas.fa-check-circle {
+  transform: scale(1.2);
+}
+
+/* تحسين مظهر زر الإغلاق */
+.btn-close:hover {
+  opacity: 0.8;
+  transform: rotate(90deg);
+  transition: all 0.3s ease;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #00e5ff; /* لون الأيقونات */
+}
+
+.carousel-arrow:hover {
+  background: #00e5ff; /* تغيير خلفية الزر عند التحويم */
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3); /* إضافة تأثير ظل عند التحويم */
+}
+
+.carousel-arrow i {
+  font-size: 16px; /* حجم الأيقونات */
+  line-height: 40px; /* محاذاة عمودية */
+}
+
+.carousel-arrow.prev {
+  right: -20px;
+}
+
+.carousel-arrow.next {
+  left: -20px;
+}
+
+/* تنسيق أزرار التحكم في قسم الخدمات */
+.vs-service-wrapper .carousel-arrow {
+  background: rgba(255, 255, 255, 0.9);
+  color: #00e5ff;
+}
+
+.vs-service-wrapper .carousel-arrow:hover {
+  background: #00e5ff;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+}
+
+.vs-service-wrapper .carousel-arrow.prev {
+  right: -50px; /* زيادة المسافة للخارج */
+}
+
+.vs-service-wrapper .carousel-arrow.next {
+  left: -50px; /* زيادة المسافة للخارج */
+}
+
+/* تعديل موضع الأزرار على الشاشات الصغيرة */
+@media (max-width: 1200px) {
+  .vs-service-wrapper .carousel-arrow.prev {
+    right: -20px;
+  }
+
+  .vs-service-wrapper .carousel-arrow.next {
+    left: -20px;
+  }
+}
